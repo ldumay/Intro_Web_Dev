@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//FR" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+    <head>
+		<!-- Title -->
+        <title>Intro Web Dev</title>
+		<!-- ./Title -->
+
+        <!-- MetasDatas -->
+        <meta name="Content-Type" content="UTF-8" charset="UTF-8">
+        <meta name="Content-Language" content="fr">
+		
+	</head>
+	<body>
+		<form>
+			<table>
+				<tr>
+					<td align="right"><label>Votre pseudo : </label></td>
+					<td><input type="text" name="pseudo"/></td>
+				</tr>
+				<tr>
+					<td align="right"><label>Votre mot de passe : </label></td>
+					<td><input type="text" name="password"/></td>
+				</tr>
+				<tr>
+					<td align="right"><label>Ressaisir votre mot de passe : </label></td>
+					<td><input type="text" name="password_verif"/></td>
+				</tr>
+				<tr>
+					<td align="right"><label>OS préféré : </label></td>
+					<td>
+						<input type="radio" name="os" value="windows_XP">
+						<label>windows XP</label>
+						<br>
+						<input type="radio" name="os" value="windows_Vista">
+						<label>windows Vista</label>
+						<br>
+						<input type="radio" name="os" value="mac_os">
+						<label>Mac OS X</label>
+						<br>
+						<input type="radio" name="os" value="linux">
+						<label>Linux</label>
+						<br>
+						<input type="radio" name="os" value="other">
+						<label>Autre</label>
+					</td>
+				</tr>
+				<tr>
+					<td align="right"><label>Vous possédez : </label></td>
+					<td>
+						<input type="checkbox" name="support" value="pc_bureau">
+						<label>Un ordinateur de bureau</label>
+						<br>
+						<input type="checkbox" name="support" value="pc_portable">
+						<label>Un portable</label>
+						<br>
+						<input type="checkbox" name="support" value="netbook">
+						<label>Un netbook</label>
+						<br>
+						<input type="checkbox" name="support" value="tablette">
+						<label>Une tablette (Pad)</label>
+					</td>
+				</tr>
+				<tr>
+					<td align="right"><label>Votre profession : </label></td>
+					<td>
+						<select type="select" name="job" multiple="yes">
+							<option valeur="chomeur">Chômeur</option>
+							<option valeur="etudiant">Etudiant</option>
+							<option valeur="fonctionnaire">Fonctionnaire</option>
+							<option valeur="prive">Privé</option>
+							<option valeur="retraite">Retraité</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" name="valid" value="S'inscrire !"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
