@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//FR" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+    <head>
+		<!-- Title -->
+        <title>Intro Web Dev</title>
+		<!-- ./Title -->
+
+        <!-- MetasDatas -->
+        <meta name="Content-Type" content="UTF-8" charset="UTF-8">
+        <meta name="Content-Language" content="fr">
+		
+	</head>
+	<body>
+	</body>
+	<!-- Javascript -->
+        <!-- Javascript_And_JQuery_Importations -->
+        <script type="text/javascript">
+		
+			// - - - [ Exercice 1 ] - - - 
+			var pageHTML = "";
+			
+			var text_1 = "Salut tous le monde !";
+			var text_2 = "Ceci est un text normal.";
+			var text_3 = "Ceci est un text en gras via HTML";
+			var text_4 = "<table border='1'><tr><td>première case</td><td>seconde case</td><td>troisième case</td></tr><tr><td>et voici</td><td>une seconde</td><td>ligne</td></tr></table>";
+			var text_5 = "<br>Ceci est un text en gras  via HTML";
+			
+			pageHTML += "<h2>Exercice 1</h2>";
+			
+			pageHTML += "<h1>"+text_1+"</h1>";
+			pageHTML += "<p>"+text_2+"</p>";
+			pageHTML += "<p><b>"+text_3+"</b></p>";
+			pageHTML += text_4;
+			pageHTML += text_5.bold();
+			
+			// - - - [ Exercice 2 ] - - - 
+			pageHTML += "<h2>Exercice 2</h2>";
+			
+			var a = 1; var b = 2; var c = 3; var d = 4; var e = 5; var f = 6;
+			var chaine = "une chaine de caractère";
+			var tableau = "<table border='1'><tr><td>"+a+"</td><td>"+b+"</td><td>"+c+"</td></tr><tr><td>"+d+"</td><td>"+e+"</td><td>"+f+"</td></tr></table>";
+			
+			pageHTML += "<br>var A = "+a;
+			pageHTML += "<br>chaine : "+chaine;
+			pageHTML += "<br><br>var A = "+a+" - chaine : "+chaine;
+			pageHTML += "<br><br>"+tableau;
+			
+			// - - - [ Exercice 3 ] - - - 
+			pageHTML += "<h2>Exercice 3</h2>";
+			
+			document.documentElement.innerHTML += pageHTML;
+		</script>
+        <!-- ./Javascript_And_JQuery_Importations -->
+    <!-- ./Javacsript -->
+</html>
