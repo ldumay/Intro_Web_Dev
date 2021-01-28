@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//FR" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+    <head>
+		<!-- Title -->
+        <title>Intro Web Dev</title>
+		<!-- ./Title -->
+
+        <!-- MetasDatas -->
+        <meta name="Content-Type" content="UTF-8" charset="UTF-8">
+        <meta name="Content-Language" content="fr">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+	</head>
+	<body>
+		<form action="http://univcergy.phpnet.org/CCI/form.php" method="post">
+			<h1>Moteur de recherche</h1>
+			<table>
+				<tr>
+					<td align="right"><label>Mots clefs</label></td>
+					<td><input class="form-control" type="text" name="motclef"/></td>
+				</tr>
+				<tr>
+					<td align="right"><label>Catégories </label></td>
+					<td>
+						<select class="form-control" type="select" name="categorie" multiple="yes">
+							<option valeur="jouets">jouets</option>
+							<option valeur="locations">locations</option>
+							<option valeur="voiture">voiture</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="right"><label>Département </label></td>
+					<td>
+						<select class="form-control" type="select" name="dept">
+							<option valeur="bretagne">bretagne</option>
+							<option valeur="yvelines">yvelines</option>
+							<option valeur="val_doise">val d'oise</option>
+							<option valeur="oise">oise</option>
+							<option valeur="haute_seine">haute seine</option>
+							<option valeur="eure">eure</option>
+							<option valeur="eure_et_loire">eure et loire</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input class="btn btn-success btn-lg" type="submit" name="recherche" value="Chercher"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<?php
+	// - - - Modèle de code possible en PHP après validation du formulaire.
+	if(isset($_POST['Chercher']){
+		if(isset($_POST['login'])){ $login = $_POST['login']; }
+		if(isset($_POST['password'])){ $password = $_POST['password']; }
+		if( ($login=='admin') && ($password=='pwd') ){
+			header('<source_demande_>.html'); //Avec un ajout possible de validation en session ou en cookie
+		} else {
+			header('<source_demande_>.html'); //Avec un ajout possible d'une erreur en session ou en cookie
+		}
+	} else {
+		header('<source_demande_>.html'); //Avec un ajout possible d'une erreur en session ou en cookie
+	}
+?>
+<hr>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//FR" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+    <head>
+		<!-- Title -->
+        <title>Intro Web Dev</title>
+		<!-- ./Title -->
+
+        <!-- MetasDatas -->
+        <meta name="Content-Type" content="UTF-8" charset="UTF-8">
+        <meta name="Content-Language" content="fr">
+		
+	</head>
+	<body>
+		<form align="center" action="#" method="post">
+			<h1>Sport que tu aimes</h1>
+			<table align="center">
+				<tr>
+					<td>
+						<input type="checkbox" name="user" value="judo">
+						<label>Judo</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" name="user" value="tennis">
+						<label>Tennis</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" name="user" value="pinao">
+						<label>Piano</label>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="submit" name="recherche" value="Chercher"></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
