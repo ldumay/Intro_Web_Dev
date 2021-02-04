@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//FR" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+    <head>
+		<!-- Title -->
+        <title>Intro Web Dev</title>
+		<!-- ./Title -->
+
+        <!-- MetasDatas -->
+        <meta name="Content-Type" content="UTF-8" charset="UTF-8">
+        <meta name="Content-Language" content="fr">
+
+	</head>
+	<body>
+	</body>
+	<!-- Javascript -->
+        <!-- Javascript_And_JQuery_Importations -->
+        <script type="text/javascript">
+          // - - - [ Exercice 6 ] - - -
+          pageHTML = '<h1><b>Javascript</b></h1>';
+    			pageHTML += '<hr><h2>Exercice 6</h2>';
+
+    			pageHTML +='<h3>Partie A : </h3>';
+    			function inputToInput(){
+    				var A = document.getElementById('variableA').value;
+    				document.getElementById('variableB').value = A;
+    			}
+
+    			pageHTML += '<form id="fomulaireA">';
+
+    			pageHTML += '<label>Variable A :</label><br>';
+    			pageHTML += '<input type="text" id="variableA" placeholder="Sairir une variable à copier" value=""/> <br><br>';
+
+    			pageHTML += '<label>Variable B :</label><br>';
+    			pageHTML += '<input type="text" id="variableB" placeholder="Variable copiée" value="" disabled/> <br><br>';
+
+    			pageHTML += '<input type="button" name"testGenerateurDeTableau" value="Copie d\'un Input vers un autre" onclick="inputToInput()" />';
+    			pageHTML += '</form>';
+
+
+    			pageHTML +='<h3>Partie B : </h3>';
+          function generateSelectPays(){
+            var listeDesOptionsDuSelect = '';
+            var listePays = [
+              {code : "FR", pays : "France"},
+              {code : "CA", pays : "Canada"},
+              {code : "BL", pays : "Belgique"},
+              {code : "RU", pays : "Royaume-Uni"},
+              {code : "AL", pays : "Allemagne"},
+              {code : "PB", pays : "Pays-Bas"},
+              {code : "RT", pays : "République-Tchèque"},
+              {code : "ES", pays : "Espagne"},
+              {code : "SU", pays : "Suède"},
+              {code : "PO", pays : "Portugal"}
+            ];
+            listePays.forEach(function(itemPays){
+              //console.log(itemPays.code);
+              //console.log(itemPays.pays);
+              listeDesOptionsDuSelect += '<option value='+itemPays.code+'>'+itemPays.pays+'</option>';
+            });
+            console.log(listeDesOptionsDuSelect);
+            alert(document.getElementById('selectPays'));
+            // document.getElementById('selectPays').innerHTML += listeDesOptionsDuSelect;
+          }
+
+          function copiePays(){
+    				var paysSelectionne = document.getElementById('selectPays').value;
+    				document.getElementById('paysSelectionne').value = paysSelectionne;
+    			}
+
+          pageHTML += '<form id="fomulaireB">';
+          pageHTML += '<label>Liste pays :</label><br>';
+          pageHTML += '<select id="selectPays"><option value="default" selected>Veuillez sélectionner un pays</option></select> <br><br>';
+          generateSelectPays();
+          pageHTML += '<label>Champs pays :</label><br>';
+    			pageHTML += '<input type="text" id="paysSelectionne" placeholder="Pays sélectionné" value="" disabled/> <br><br>';
+          pageHTML += '<input type="button" name"validSelectionPays" value="Valider la sélection" onclick="copiePays()" />';
+    			pageHTML += '</form>';
+
+    			document.documentElement.innerHTML += pageHTML;
+    		</script>
+        <!-- ./Javascript_And_JQuery_Importations -->
+    <!-- ./Javacsript -->
+</html>

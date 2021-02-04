@@ -8,182 +8,179 @@
         <!-- MetasDatas -->
         <meta name="Content-Type" content="UTF-8" charset="UTF-8">
         <meta name="Content-Language" content="fr">
-		
+
 	</head>
 	<body>
 	</body>
 	<!-- Javascript -->
         <!-- Javascript_And_JQuery_Importations -->
         <script type="text/javascript">
-		
-			// - - - [ Exercice 1 ] - - - 
-			var pageHTML = '';
-			
-			var text_1 = 'Salut tous le monde !';
-			var text_2 = 'Ceci est un text normal.';
-			var text_3 = 'Ceci est un text en gras via HTML';
-			var text_4 = '<table border="1"><tr><td>première case</td><td>seconde case</td><td>troisième case</td></tr><tr><td>et voici</td><td>une seconde</td><td>ligne</td></tr></table>';
-			var text_5 = '<br>Ceci est un text en gras  via HTML';
-			
-			pageHTML += '<h2>Exercice 1</h2>';
-			
-			pageHTML += '<h1>'+text_1+'</h1>';
-			pageHTML += '<p>'+text_2+'</p>';
-			pageHTML += '<p><b>'+text_3+'</b></p>';
-			pageHTML += text_4;
-			pageHTML += text_5.bold();
-			
-			
+    			// - - - [ Exercice 1 ] - - -
+    			var pageHTML = '';
 
-			// - - - [ Exercice 2 ] - - - 
-			pageHTML += '<h2>Exercice 2</h2>';
-			
-			var a = 1; var b = 2; var c = 3; var d = 4; var e = 5; var f = 6;
-			var chaine = 'une chaine de caractère';
-			var tableau = '<table border="1"><tr><td>'+a+'</td><td>'+b+'</td><td>'+c+'</td></tr><tr><td>'+d+'</td><td>'+e+'</td><td>'+f+'</td></tr></table>';
-			
-			pageHTML += '<br>var A = '+a;
-			pageHTML += '<br>chaine : '+chaine;
-			pageHTML += '<br><br>var A = '+a+' - chaine : '+chaine;
-			pageHTML += '<br><br>'+tableau;
+    			pageHTML += '<h1><b>Javascript</b></h1>';
 
-			
+    			var text_1 = 'Salut tous le monde !';
+    			var text_2 = 'Ceci est un text normal.';
+    			var text_3 = 'Ceci est un text en gras via HTML';
+    			var text_4 = '<table border="1"><tr><td>première case</td><td>seconde case</td><td>troisième case</td></tr><tr><td>et voici</td><td>une seconde</td><td>ligne</td></tr></table>';
+    			var text_5 = '<br>Ceci est un text en gras  via HTML';
 
-			// - - - [ Exercice 3 ] - - - 
-			function generationDeTableAvecVariables(pageHTML){
-				pageHTML += '<h2>Exercice 3</h2>';
+    			pageHTML += '<hr><h2>Exercice 1</h2>';
 
-				var variable_1 = 1;
-				var variable_2 = 2;
-				var variable_3 = 3;
-				var variable_4 = 4;
-				
-				var tableau = '<table border="1"> <tr><td>variable '+variable_1+'</td><td>variable '+variable_2+'</td></tr> <tr><td>variable '+variable_3+'</td><td>variable '+variable_4+'</td></tr> </table>';
-
-				pageHTML += tableau;
-			
-				return pageHTML;
-			}
-
-			document.documentElement.innerHTML += generationDeTableAvecVariables(pageHTML);
-
-			
-
-			// - - - [ Exercice 4 ] - - - 
-
-			function alertBouton(){
-				var message = 'Vous avez cliqué sur le bouton.';
-				alert(message);
-				console.log(message);
-			}
-
-			function survole(survole){
-				if(survole==1){
-					var message = 'Vous avez survolé sur le lien.';
-					alert(message);
-					console.log(message);
-				}
-				else if(survole==2){
-					var message = 'Vous avez survolé sur le logo google.';
-					alert(message);
-					console.log(message);
-				}
-			}
-
-			pageHTML = '<h2>Exercice 4</h2>';
-
-			pageHTML += '<input type="button" name"appelAlert" value="Cliquez sur le bouton !" onclick="alertBouton()" />';
-
-			pageHTML += '<hr><p>Survolez le lien ou l\'image avec la souris.</p>';
-
-			src_lien = 'https://ih1.redbubble.net/image.1057074324.9009/st,small,507x507-pad,600x600,f8f8f8.jpg';
-			pageHTML += '<a href="'+src_lien+'" name="lien" onmouseover="survole(1)">Survolez à survoler clicable ;).</a>';
-
-			src_image = 'https://s3.amazonaws.com/images.seroundtable.com/new-google-logo-animated-1441195158.gif';
-			pageHTML += '<br><br><img src="'+src_image+'" name="image" onmouseover="survole(2)" width="150px" border="1"/>';
-
-			document.documentElement.innerHTML += pageHTML;
-
-			
-
-			// - - - [ Exercice 5 ] - - -
-
-			pageHTML = '<h2>Exercice 5</h2>';
-
-			// - - Partie 1 - - 
-			var testDeVariableCompteur = 0;
-
-			function testDeSuperioritee(variable,superioritee){
-				var message = '';
-				if(variable<=superioritee){
-					message = 'La variable testé est : '+variable+'.<br>Celle-ci est inférieur à '+superioritee+'.';
-				} else {
-					message = 'La variable testé est : '+variable+'.<br>Celle-ci est supérieur à '+superioritee+'.';
-				}
-				return message;
-			}
-
-			function testDeVariable(fonctionnalite,modeAleatoire,variable,superioritee){
-				testDeVariableCompteur++;
-
-				var resultatresultat = '';
-
-				if( (variable==0) && (modeAleatoire==true) ){
-					variable = Math.floor(Math.random() * 10);
-				}
-				if(fonctionnalite==1){
-					resultat = testDeSuperioritee(variable,superioritee);
-				}
-				document.getElementById('resultatTestDeVariable').innerHTML = '<br><b>Test N°'+testDeVariableCompteur+':</b> <br>'+resultat;
-			}
-
-			pageHTML +='<h2>Structure conditionnelle if</h2>';
-			pageHTML += '<input type="button" name"testDeVariable" value="Test de variable" onclick="testDeVariable(1,true,0,10)" />';
-			pageHTML += '<div id="resultatTestDeVariable"><p></p></div>';
-
-			// - - Partie 2 - - 
-			pageHTML +='<h2>Structure itérative for</h2>';
-
-			function iterativeFor(){
-				for(var i=0; i<=10; i++){
-					document.getElementById('iterativeFor').innerHTML += i+' ';
-				}
-			}
-			pageHTML +='<h3>Partie A : </h3>';
-			pageHTML += '<input type="button" name"testiterativeFor" value="Test A" onclick="iterativeFor()" />';
-			pageHTML += '<div id="iterativeFor"><p></p></div>';
-
-			// - - Partie 3 - - 
-
-			function generateurDeTableau(nombreDeLigne,nombreDeColonnes){
-				var tableau = '';
-				var tableauDebut = '<table border="1">';
-				var tableauFin = '</table>';
-				var contenuDuTableau = '';
-
-				// Ajout de lignes au tableau
-				for(var i=1; i<=nombreDeLigne; i++){
-					contenuDuTableau += '<tr>';
-					// Ajout de colonnes au tableau
-					for(var j=1; j<=nombreDeColonnes; j++){
-						contenuDuTableau += '<td>L.'+i+' - C.'+j+'</td>';
-					}
-					contenuDuTableau += '</tr>';
-				}
-
-				tableau += tableauDebut + contenuDuTableau + tableauFin + '<p>L = ligne / C = colonne</p>';
-				document.getElementById('generateurDeTableau').innerHTML += tableau;
-			}
-			pageHTML +='<h3>Partie B : </h3>';
-			pageHTML += '<input type="button" name"testGenerateurDeTableau" value="Test B" onclick="generateurDeTableau(10,10)" />';
-			pageHTML += '<div id="generateurDeTableau"><p></p></div>';
-
-			document.documentElement.innerHTML += pageHTML;
+    			pageHTML += '<h1>'+text_1+'</h1>';
+    			pageHTML += '<p>'+text_2+'</p>';
+    			pageHTML += '<p><b>'+text_3+'</b></p>';
+    			pageHTML += text_4;
+    			pageHTML += text_5.bold();
 
 
 
-			// - - - [ Exercice 6 ] - - -
-		</script>
+    			// - - - [ Exercice 2 ] - - -
+    			pageHTML += '<hr><h2>Exercice 2</h2>';
+
+    			var a = 1; var b = 2; var c = 3; var d = 4; var e = 5; var f = 6;
+    			var chaine = 'une chaine de caractère';
+    			var tableau = '<table border="1"><tr><td>'+a+'</td><td>'+b+'</td><td>'+c+'</td></tr><tr><td>'+d+'</td><td>'+e+'</td><td>'+f+'</td></tr></table>';
+
+    			pageHTML += '<br>var A = '+a;
+    			pageHTML += '<br>chaine : '+chaine;
+    			pageHTML += '<br><br>var A = '+a+' - chaine : '+chaine;
+    			pageHTML += '<br><br>'+tableau;
+
+
+
+    			// - - - [ Exercice 3 ] - - -
+    			function generationDeTableAvecVariables(pageHTML){
+    				pageHTML += '<hr><h2>Exercice 3</h2>';
+
+    				var variable_1 = 1;
+    				var variable_2 = 2;
+    				var variable_3 = 3;
+    				var variable_4 = 4;
+
+    				var tableau = '<table border="1"> <tr><td>variable '+variable_1+'</td><td>variable '+variable_2+'</td></tr> <tr><td>variable '+variable_3+'</td><td>variable '+variable_4+'</td></tr> </table>';
+
+    				pageHTML += tableau;
+
+    				return pageHTML;
+    			}
+
+    			document.documentElement.innerHTML += generationDeTableAvecVariables(pageHTML);
+
+
+
+    			// - - - [ Exercice 4 ] - - -
+
+    			function alertBouton(){
+    				var message = 'Vous avez cliqué sur le bouton.';
+    				alert(message);
+    				console.log(message);
+    			}
+
+    			function survole(survole){
+    				if(survole==1){
+    					var message = 'Vous avez survolé sur le lien.';
+    					alert(message);
+    					console.log(message);
+    				}
+    				else if(survole==2){
+    					var message = 'Vous avez survolé sur le logo google.';
+    					alert(message);
+    					console.log(message);
+    				}
+    			}
+
+    			pageHTML = '<hr><h2>Exercice 4</h2>';
+
+    			pageHTML += '<input type="button" name"appelAlert" value="Cliquez sur le bouton !" onclick="alertBouton()" />';
+
+    			pageHTML += '<hr><p>Survolez le lien ou l\'image avec la souris.</p>';
+
+    			src_lien = 'https://ih1.redbubble.net/image.1057074324.9009/st,small,507x507-pad,600x600,f8f8f8.jpg';
+    			pageHTML += '<a href="'+src_lien+'" name="lien" onmouseover="survole(1)">Survolez à survoler clicable ;).</a>';
+
+    			src_image = 'https://s3.amazonaws.com/images.seroundtable.com/new-google-logo-animated-1441195158.gif';
+    			pageHTML += '<br><br><img src="'+src_image+'" name="image" onmouseover="survole(2)" width="150px" border="1"/>';
+
+    			document.documentElement.innerHTML += pageHTML;
+
+
+
+    			// - - - [ Exercice 5 ] - - -
+
+    			pageHTML = '<hr><h2>Exercice 5</h2>';
+
+    			// - - Partie 1 - -
+    			var testDeVariableCompteur = 0;
+
+    			function testDeSuperioritee(variable,superioritee){
+    				var message = '';
+    				if(variable<=superioritee){
+    					message = 'La variable testé est : '+variable+'.<br>Celle-ci est inférieur à '+superioritee+'.';
+    				} else {
+    					message = 'La variable testé est : '+variable+'.<br>Celle-ci est supérieur à '+superioritee+'.';
+    				}
+    				return message;
+    			}
+
+    			function testDeVariable(fonctionnalite,modeAleatoire,variable,superioritee){
+    				testDeVariableCompteur++;
+
+    				var resultatresultat = '';
+
+    				if( (variable==0) && (modeAleatoire==true) ){
+    					variable = Math.floor(Math.random() * 10);
+    				}
+    				if(fonctionnalite==1){
+    					resultat = testDeSuperioritee(variable,superioritee);
+    				}
+    				document.getElementById('resultatTestDeVariable').innerHTML = '<br><b>Test N°'+testDeVariableCompteur+':</b> <br>'+resultat;
+    			}
+
+    			pageHTML +='<h2>Structure conditionnelle if</h2>';
+    			pageHTML += '<input type="button" name"testDeVariable" value="Test de variable" onclick="testDeVariable(1,true,0,10)" />';
+    			pageHTML += '<div id="resultatTestDeVariable"><p></p></div>';
+
+    			// - - Partie 2 - -
+    			pageHTML +='<h2>Structure itérative for</h2>';
+
+    			function iterativeFor(){
+    				for(var i=0; i<=10; i++){
+    					document.getElementById('iterativeFor').innerHTML += i+' ';
+    				}
+    			}
+    			pageHTML +='<h3>Partie A : </h3>';
+    			pageHTML += '<input type="button" name"testiterativeFor" value="Test A" onclick="iterativeFor()" />';
+    			pageHTML += '<div id="iterativeFor"></div>';
+
+    			// - - Partie 3 - -
+
+    			function generateurDeTableau(nombreDeLigne,nombreDeColonnes){
+    				var tableau = '';
+    				var tableauDebut = '<table border="1">';
+    				var tableauFin = '</table>';
+    				var contenuDuTableau = '';
+
+    				// Ajout de lignes au tableau
+    				for(var i=1; i<=nombreDeLigne; i++){
+    					contenuDuTableau += '<tr>';
+    					// Ajout de colonnes au tableau
+    					for(var j=1; j<=nombreDeColonnes; j++){
+    						contenuDuTableau += '<td>L.'+i+' - C.'+j+'</td>';
+    					}
+    					contenuDuTableau += '</tr>';
+    				}
+
+    				tableau += tableauDebut + contenuDuTableau + tableauFin + '<p>L = ligne / C = colonne</p>';
+    				document.getElementById('generateurDeTableau').innerHTML += tableau;
+    			}
+    			pageHTML +='<h3>Partie B : </h3>';
+    			pageHTML += '<input type="button" name"testGenerateurDeTableau" value="Test B" onclick="generateurDeTableau(10,10)" />';
+    			pageHTML += '<div id="generateurDeTableau"></div>';
+
+    			document.documentElement.innerHTML += pageHTML;
+    		</script>
         <!-- ./Javascript_And_JQuery_Importations -->
     <!-- ./Javacsript -->
 </html>
