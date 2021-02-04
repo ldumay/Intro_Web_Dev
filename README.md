@@ -21,4 +21,4 @@ Disponibles dans le dossier [Mementos](Mementos).
 - Exercice 6 - "/TP_2/exercice_6" : [Lien github](https://github.com/ldumay/Intro_Web_Dev/blob/main/TP_2/exercice_6.html)
 
 ## TP3 - JS
-- Exercice 1 à 2 - "/TP_3/exercice_1" : [Lien github](https://github.com/ldumay/Intro_Web_Dev/blob/main/TP_3/exercice_1.html)
+- Exercice 1 à 5 - "/TP_3/exercice_1" : [Lien github](https://github.com/ldumay/Intro_Web_Dev/blob/main/TP_3/exercice_1.html)
