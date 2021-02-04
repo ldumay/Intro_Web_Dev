@@ -16,6 +16,8 @@
         <!-- Javascript_And_JQuery_Importations -->
         <script type="text/javascript">
           // - - - [ Exercice 6 ] - - -
+
+          // - - Partie 1 - -
           pageHTML = '<h1><b>Javascript</b></h1>';
     			pageHTML += '<hr><h2>Exercice 6</h2>';
 
@@ -36,6 +38,7 @@
     			pageHTML += '<input type="button" name"testGenerateurDeTableau" value="Copie d\'un Input vers un autre" onclick="inputToInput()" />';
     			pageHTML += '</form>';
 
+          // - - Partie 2 - -
 
     			pageHTML +='<h3>Partie B : </h3>';
           function generateSelectPays(){
@@ -55,11 +58,10 @@
             listePays.forEach(function(itemPays){
               //console.log(itemPays.code);
               //console.log(itemPays.pays);
-              listeDesOptionsDuSelect += '<option value='+itemPays.code+'>'+itemPays.pays+'</option>';
+              listeDesOptionsDuSelect += '<option value='+itemPays.code+'-'+itemPays.pays+'>'+itemPays.pays+'</option>';
             });
-            console.log(listeDesOptionsDuSelect);
-            alert(document.getElementById('selectPays'));
-            // document.getElementById('selectPays').innerHTML += listeDesOptionsDuSelect;
+            //console.log(listeDesOptionsDuSelect);
+            document.getElementById('selectPays').innerHTML += listeDesOptionsDuSelect;
           }
 
           function copiePays(){
@@ -68,15 +70,74 @@
     			}
 
           pageHTML += '<form id="fomulaireB">';
+          pageHTML += '<div id="contenuFormulaireB">'
           pageHTML += '<label>Liste pays :</label><br>';
           pageHTML += '<select id="selectPays"><option value="default" selected>Veuillez sélectionner un pays</option></select> <br><br>';
-          generateSelectPays();
           pageHTML += '<label>Champs pays :</label><br>';
     			pageHTML += '<input type="text" id="paysSelectionne" placeholder="Pays sélectionné" value="" disabled/> <br><br>';
           pageHTML += '<input type="button" name"validSelectionPays" value="Valider la sélection" onclick="copiePays()" />';
+          pageHTML += '</div>';
     			pageHTML += '</form>';
 
     			document.documentElement.innerHTML += pageHTML;
+          generateSelectPays();
+
+          // - - Partie 3 - -
+
+          function copieFormBToFomC(){
+            var contenuFormulaireB = document.querySelectorAll('#contenuFormulaireB');
+            console.log(contenuFormulaireB);
+            document.getElementById('fomulaireC').innerHTML += '<hr><h4>New Form - copied !</h4>'+contenuFormulaireB[0].innerHTML+'<p><i>fonction non fonctionnel</i></p><hr>';
+          }
+          pageHTML ='<h3>Partie C : <samll style="font-size:0.9rem;">Copie d\'un formulaire vers un autre.</small></h3>';
+          pageHTML += '<input type="button" name"testGenerateurDeTableau" value="Copie de la Partie B à C" onclick="copieFormBToFomC()" /><br><br>';
+          pageHTML += '<form id="fomulaireC">';
+          pageHTML += '</form>';
+          document.documentElement.innerHTML += pageHTML;
+
+          // - - Partie 4 - -
+          function verifierQCM(){
+            var pointsTotal = 0;
+            var reponseA = document.getElementById('reponseA').value;
+            var reponseB = document.getElementById('reponseB').value;
+            var reponseC = document.getElementById('reponseC').value;
+            var reponseD = document.getElementById('Google');
+            console.log(reponseA+' - '+reponseB+' - '+reponseC+' - '+reponseD);
+            if(reponseA==2){ pointsTotal++; }
+            if(reponseB=='non'){ pointsTotal++; }
+            if(reponseC=='oui'){ pointsTotal++; }
+            if(reponseD.checked){ pointsTotal++; }
+            console.log(pointsTotal);
+            document.getElementById('totalBonnesReponses').innerHTML = 'Total de bonnes réponses : '+pointsTotal+'/4';
+          }
+
+          pageHTML ='<h3>Partie C : </h3>';
+          pageHTML += '<form id="QCM">';
+
+          pageHTML += '<label>Q 1 : 1+1=2 ?</label> <br>';
+          pageHTML += '<input type="text" id="reponseA" placeholder="Saisir un chiffre" value=""/> <br><br>';
+
+          pageHTML += '<label>Q 2 : 98+12=130 ?</label> <br>';
+          pageHTML += '<input type="text" id="reponseB" placeholder="Oui ou non" value=""/> <br><br>';
+
+          pageHTML += '<label>Q 3 : 20+55=75 ?</label> <br>';
+          pageHTML += '<input type="text" id="reponseC" placeholder="Oui ou non" value=""/> <br><br>';
+
+          pageHTML += '<label>Q 4 : Quel est ce logo ?</label> <br>';
+          src_image = 'https://s3.amazonaws.com/images.seroundtable.com/new-google-logo-animated-1441195158.gif';
+    			pageHTML += '<img src="'+src_image+'" name="image" width="150px" border="1"/>';
+          pageHTML += '<br><br>';
+          pageHTML += '<input type="radio" id="Facebook" name="reponseD" value="Facebook"/> Facebook<br>';
+          pageHTML += '<input type="radio" id="Twitter" name="reponseD" value="Twitter"/> Twitter<br>';
+          pageHTML += '<input type="radio" id="Google" name="reponseD" value="Google"/> Google<br>';
+          pageHTML += '<br>';
+
+          pageHTML += '<input type="button" id="verifierQCM" value="Valider" onclick="verifierQCM()" /><br><br>';
+
+          pageHTML += '<div id="totalBonnesReponses"></div>';
+
+          pageHTML += '</form>';
+          document.documentElement.innerHTML += pageHTML;
     		</script>
         <!-- ./Javascript_And_JQuery_Importations -->
     <!-- ./Javacsript -->
