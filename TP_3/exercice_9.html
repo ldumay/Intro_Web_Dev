@@ -16,28 +16,28 @@
     <form>
       <hr><h3>Partie A - Email Vérification :</h3>
       <input type="text" id="inputTextMail" placeholder="Email"/>
-      <input type="button" id="inputButtonMail" onclick="mailVerif()" value="Valider"/>
+      <input type="button" id="inputButtonMail" onclick="checkMail()" value="Valider"/>
+      <p>Exemple fonctionnel : mail@mail.xyz </p>
       <h3>Partie B - Téléphone Vérification :</h3>
       <input type="text" id="inputTextTelephone" placeholder="Téléphone"/>
       <input type="button" id="inputButtonTelephone" onclick="checkPhone()" value="Valider"/>
+      <p>Exemple fonctionnel : +33123456789 / 0123456789</p>
     </form>
 	</body>
 	 <!-- Javascript -->
-    <script type="text/javascript" src="../LDumay_Packages_Javascript/Mail_Clean.js"></script>
+    <script type="text/javascript" src="../LDumay_Packages_Javascript/Mail_Verif.js"></script>
     <script type="text/javascript" src="../LDumay_Packages_Javascript/Phone_Clean.js"></script>
     <script type="text/javascript">
       // - - - [ Exercice 9 ] - - -
       function checkMail(){
         var mail = document.getElementById('inputTextMail').value;
-        var mailVerif = mailVerif(telephone);
-        console.log(mailVerif);
-        alert(mailVerif);
+        var statutMail = mailVerif(mail);
+        alert(statutMail);
       }
       //--
       function checkPhone(){
         var telephone = document.getElementById('inputTextTelephone').value;
         var newTelephone = phoneClean(telephone);
-        console.log(newTelephone);
         alert('Voici votre numéro de téléphone : '+newTelephone);
       }
     </script>

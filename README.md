@@ -29,3 +29,12 @@ Disponibles dans le dossier [Mementos](Mementos).
     - [source 1](https://stackoverflow.com/questions/19846078/how-to-read-from-chromes-console-in-javascript)
     - [source 2](https://stackoverflow.com/questions/52347756/read-console-log-output-form-javascript/52347837)
 - Exercice 9 - "/TP_3/exercice_9" : [Lien github](https://github.com/ldumay/Intro_Web_Dev/blob/main/TP_3/exercice_9.html)
+- Exercice 10 - "/TP_3/exercice_9" : [Lien github](https://github.com/ldumay/Intro_Web_Dev/blob/main/TP_3/exercice_10.html)
+
+## TP4 - PHP
+- Exercice 1 - "/TP_4/exercice_1" : [Lien github](https://github.com/ldumay/Intro_Web_Dev/blob/main/TP_4/exercice_1.html)
+- Exercice 1 bis - "/TP_4/exercice_1_bis" : [Lien github](https://github.com/ldumay/Intro_Web_Dev/blob/main/TP_4/exercice_1_bis.html)
+- Exercice 2 - "/TP_4/exercice_2" : [Lien github](https://github.com/ldumay/Intro_Web_Dev/blob/main/TP_4/exercice_2.html)
+
+## TP4 Bis - PHP
+- Exercice Complet - "/TP_4_bis/" : [Lien github](https://github.com/ldumay/Intro_Web_Dev/blob/main/TP_4_bis/)
