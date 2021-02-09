@@ -22,3 +22,10 @@ Disponibles dans le dossier [Mementos](Mementos).
 
 ## TP3 - JS
 - Exercice 1 à 5 - "/TP_3/exercice_1" : [Lien github](https://github.com/ldumay/Intro_Web_Dev/blob/main/TP_3/exercice_1.html)
+- Exercice 6 - "/TP_3/exercice_6" : [Lien github](https://github.com/ldumay/Intro_Web_Dev/blob/main/TP_3/exercice_6.html)
+- Exercice 7 - ✖ : ✖ (non fait)
+- Exercice 8 - "/TP_3/exercice_8" : [Lien github](https://github.com/ldumay/Intro_Web_Dev/blob/main/TP_3/exercice_8.html)
+  - Bonus : console qui lit la console (non réaliser pour le moment) :
+    - [source 1](https://stackoverflow.com/questions/19846078/how-to-read-from-chromes-console-in-javascript)
+    - [source 2](https://stackoverflow.com/questions/52347756/read-console-log-output-form-javascript/52347837)
+- Exercice 9 - "/TP_3/exercice_9" : [Lien github](https://github.com/ldumay/Intro_Web_Dev/blob/main/TP_3/exercice_9.html)

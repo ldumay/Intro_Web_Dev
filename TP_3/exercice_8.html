@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//FR" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+    <head>
+		<!-- Title -->
+        <title>Intro Web Dev</title>
+		<!-- ./Title -->
+
+        <!-- MetasDatas -->
+        <meta name="Content-Type" content="UTF-8" charset="UTF-8">
+        <meta name="Content-Language" content="fr">
+
+	</head>
+	<body>
+	</body>
+	 <!-- Javascript -->
+    <script type="text/javascript">
+      // - - - [ Exercice 8 ] - - -
+
+      // - - Partie 1 - -
+      pageHTML = '<h1><b>Javascript</b></h1>';
+      pageHTML += '<hr><h2>Exercice 8</h2>';
+      pageHTML += '<hr><h3>Partie A</h3>';
+      pageHTML += '<button onclick="openW()">Cliquez pour ouvrir le site Web WayToLearnX</button>';
+      pageHTML += '<br><br>';
+      pageHTML += '<a href="#" name="lien" onmouseover="closeW()">Survolez ce lien pour fermer la fenêtre</a>';
+      //---
+      var win;
+      function openW() {
+        win = window.open("https://ldumay.fr", "_blank", "width=900, height=786");
+      }
+      function closeW() {
+        win.close();
+      }
+
+      document.documentElement.innerHTML += pageHTML;
+
+      // - - Partie 2 - -
+      pageHTML = '<hr><h3>Partie B</h3>';
+      pageHTML += '<a href="#" name="lien" onmouseover="openPopUpConsole()">Ouvrir une console.</a>';
+
+      // New window PopUp
+      var winConsole;
+      let linkConsole = 'exercice_8_console.html';
+      let nameConsole = 'Console';
+      let paramsConsole = 'scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,width=600,height=700,left=-1000,top=-1000';
+
+      // Open PopUp Console
+      function openPopUpConsole(){
+        winConsole = window.open(linkConsole,nameConsole,paramsConsole);
+      }
+
+      document.documentElement.innerHTML += pageHTML;
+    </script>
+</html>

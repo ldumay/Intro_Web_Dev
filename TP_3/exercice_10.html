@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//FR" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+    <head>
+		<!-- Title -->
+        <title>Intro Web Dev</title>
+		<!-- ./Title -->
+
+        <!-- MetasDatas -->
+        <meta name="Content-Type" content="UTF-8" charset="UTF-8">
+        <meta name="Content-Language" content="fr">
+
+	</head>
+	<body>
+    <h1><b>Javascript</b></h1>
+    <hr><h2>Exercice 9</h2>
+	</body>
+	 <!-- Javascript -->
+    <script type="text/javascript">
+      // - - - [ Exercice 9 ] - - -
+      function survole(){
+        var src = 'https://www.cyclable.com/35123-large_default_new/velo-de-randonnee-histoire-bike-la-randonneuse-classique.jpg';
+        document.getElementById('image').setAttribute(src, "feed-orange.png");
+      }
+      pageHTML = '';
+      src_image = 'https://s3.amazonaws.com/images.seroundtable.com/new-google-logo-animated-1441195158.gif';
+      pageHTML += '<img src="'+src_image+'" id="image" onmouseover="survole()" width="150px" border="1"/>';
+      document.documentElement.innerHTML += pageHTML;
+    </script>
+</html>

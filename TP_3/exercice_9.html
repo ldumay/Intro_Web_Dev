@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//FR" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+    <head>
+		<!-- Title -->
+        <title>Intro Web Dev</title>
+		<!-- ./Title -->
+
+        <!-- MetasDatas -->
+        <meta name="Content-Type" content="UTF-8" charset="UTF-8">
+        <meta name="Content-Language" content="fr">
+
+	</head>
+	<body>
+    <h1><b>Javascript</b></h1>
+    <hr><h2>Exercice 9</h2>
+    <form>
+      <hr><h3>Partie A - Email Vérification :</h3>
+      <input type="text" id="inputTextMail" placeholder="Email"/>
+      <input type="button" id="inputButtonMail" onclick="mailVerif()" value="Valider"/>
+      <h3>Partie B - Téléphone Vérification :</h3>
+      <input type="text" id="inputTextTelephone" placeholder="Téléphone"/>
+      <input type="button" id="inputButtonTelephone" onclick="checkPhone()" value="Valider"/>
+    </form>
+	</body>
+	 <!-- Javascript -->
+    <script type="text/javascript" src="../LDumay_Packages_Javascript/Mail_Clean.js"></script>
+    <script type="text/javascript" src="../LDumay_Packages_Javascript/Phone_Clean.js"></script>
+    <script type="text/javascript">
+      // - - - [ Exercice 9 ] - - -
+      function checkMail(){
+        var mail = document.getElementById('inputTextMail').value;
+        var mailVerif = mailVerif(telephone);
+        console.log(mailVerif);
+        alert(mailVerif);
+      }
+      //--
+      function checkPhone(){
+        var telephone = document.getElementById('inputTextTelephone').value;
+        var newTelephone = phoneClean(telephone);
+        console.log(newTelephone);
+        alert('Voici votre numéro de téléphone : '+newTelephone);
+      }
+    </script>
+</html>

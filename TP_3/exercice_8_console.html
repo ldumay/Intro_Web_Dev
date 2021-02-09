@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//FR" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+    <head>
+		<!-- Title -->
+      <title>Intro Web Dev</title>
+		<!-- ./Title -->
+
+        <!-- MetasDatas -->
+        <meta name="Content-Type" content="UTF-8" charset="UTF-8">
+        <meta name="Content-Language" content="fr">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	</head>
+  <style>
+    #top, #bottom{
+      background-color: grey;
+      color: white;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0;
+      padding: 5%;
+    }
+    #top{ top: 0; height: 80%; }
+    #bottom{ bottom: 0; height: 20%; }
+    input{ width: 100%; }
+    textarea{ color: black; width: 100%; height: 86%; }
+  </style>
+	<body>
+    <div id="top">
+      <h1>Console</h1>
+      <hr>
+      <textarea id="consoleContent"></textarea>
+    </div>
+    <div id="bottom">
+      <input type="text"  class="form-control" id="dataInput" placeholder="Valeurs à entrée"/>
+      <input type="submit" class="btn btn-primary" id="inputValid" value="Valider"/>
+    </div>
+  </body>
+  <script type="text/javascript">
+    var compteur = 1;
+    var message = '';
+    function affichePlus(){
+      if(compteur<2){
+        document.getElementById('consoleContent').innerHTML += 'Check console '+compteur+' : ';
+      } else {
+        document.getElementById('consoleContent').innerHTML += '\nCheck console '+compteur+' : ';
+      }
+
+      compteur++;
+    }
+    setInterval(affichePlus, 1500);
+  </script>
+</html>
